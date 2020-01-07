@@ -39,7 +39,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3306/store?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
     username: root
-    password:
+    password: Oracle123
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -61,18 +61,26 @@ spring:
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
-  mail:
-    host: localhost
-    port: 25
-    username:
-    password:
+  mail: 
+        host: smtp.gmail.com
+        port: 587
+        username: bandjikb@gmail.com
+        password: Promo2@idyal
+        protocol: smtp
+        tls: true
+        auth: true
+        from: bandjikb@gmail.com
+        properties.mail.smtp:
+            auth: true
+            starttls.enable: true
+            ssl.trust: smtp.gmail.com
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
     cache: false
 
 server:
-  port: 8080
+  port: 8081
 
 # ===================================================================
 # JHipster specific properties
@@ -102,7 +110,7 @@ jhipster:
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
   mail: # specific JHipster mail property, for standard properties see MailProperties
-    base-url: http://127.0.0.1:8080
+    base-url: http://127.0.0.1:8081
   metrics:
     logs: # Reports metrics in the logs
       enabled: false
