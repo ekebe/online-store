@@ -38,6 +38,10 @@
     "enableTranslation": true,
     "nativeLanguage": "fr",
     "languages": ["fr", "en"],
-    "blueprints": []
+    "blueprints": [],
+    "appsFolders": ["online-store"],
+    "directoryPath": "../",
+    "monitoring": "no",
+    "consoleOptions": []
   }
 }
