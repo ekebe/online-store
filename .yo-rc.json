@@ -42,6 +42,8 @@
     "appsFolders": ["online-store"],
     "directoryPath": "../",
     "monitoring": "no",
-    "consoleOptions": []
+    "consoleOptions": [],
+    "herokuAppName": "ekebe-online-store",
+    "herokuDeployType": "git"
   }
 }
