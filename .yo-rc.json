@@ -44,6 +44,6 @@
     "monitoring": "no",
     "consoleOptions": [],
     "herokuAppName": "ekebe-online-store",
-    "herokuDeployType": "git"
+    "herokuDeployType": "jar"
   }
 }
