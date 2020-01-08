@@ -39,10 +39,8 @@ node {
     }
 
     stage('packaging') {
-        sh "./gradlew bootRepackage -x test -Pprod -PnodeInstall --
-        no-daemon"
-        archiveArtifacts artifacts: '**/build/libs/*.war', 
-        fingerprint: true
+        sh "./gradlew bootRepackage -x test -Pprod -PnodeInstall --no-daemon"
+        archiveArtifacts artifacts: '**/build/libs/*.war', fingerprint: true
     }
 
     stage('deployment') {
